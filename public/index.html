@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Set the character encoding for the document -->
+  <meta charset="UTF-8" />
+  
+  <!-- Configure the viewport for responsive design -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Set the title of the webpage -->
+  <title>Pokemon Rotom</title>
+  
+  <!-- Link to an external stylesheet for styling -->
+  <link rel="stylesheet" href="style.css" />
+  
+  <!-- Include an external JavaScript file with 'defer' attribute to ensure it's executed after the HTML is parsed -->
+  <script src="./pokemon.js" defer></script>
+  
+  <!-- Include another external JavaScript file with 'defer' attribute -->
+  <script src="./search.js" defer></script>
+</head>
+<body>
+  <main class="main">
+    <header class="header home">
+      <div class="container">
+        <!-- Logo and title of the webpage -->
+        <div class="logo-wrapper">
+          <img src="./assets/pokeball.svg" alt="pokeball" />
+          <h1>POKE`MON ROTOM</h1>
+        </div>
+        
+        <!-- Search bar and sorting/filtering options -->
+        <div class="search-wrapper">
+          <div class="search-wrap">
+            <!-- Search icon -->
+            <img src="./assets/search.svg" alt="search icon" class="search-icon" />
+            
+            <!-- Input field for searching -->
+            <input type="text" class="search-input body3-fonts" placeholder="Search" id="search-input" />
+            
+            <!-- Cross (close) icon for clearing search input -->
+            <img src="./assets/cross.svg" alt="cross icon" class="search-close-icon" id="search-close-icon" />
+          </div>
+          
+          <!-- Sorting and filtering options -->
+          <div class="sort-wrapper">
+            <div class="sort-wrap">
+              <!-- Sorting icon -->
+              <img src="./assets/sorting.svg" alt="sorting" class="sort-icon" id="sort-icon" />
+            </div>
+            
+            <!-- Filter options -->
+            <div class="filter-wrapper">
+              <p class="body2-fonts">Sort by:</p>
+              <div class="filter-wrap">
+                <div>
+                  <!-- Radio button for sorting by number -->
+                  <input type="radio" id="number" name="filters" value="number" checked />
+                  <label for="number" class="body3-fonts">Number</label>
+                </div>
+                <div>
+                  <!-- Radio button for sorting by name -->
+                  <input type="radio" id="name" name="filters" value="name" />
+                  <label for="name" class="body3-fonts">Name</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    
+    <!-- Section for displaying the list of Pokemon -->
+    <section class="pokemon-list">
+      <div class="container">
+        <!-- Container for the Pokemon list -->
+        <div class="list-wrapper"></div>
+      </div>
+      
+      <!-- Message to display when no Pokemon are found -->
+      <div id="not-found-message">Pokemon not found</div>
+    </section>
+  </main>
+</body>
+</html>
